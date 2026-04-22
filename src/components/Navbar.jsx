@@ -31,8 +31,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 flex items-center justify-between">
         {/* LOGO */}
-        <a href="#" className="text-2xl font-bold text-white tracking-wider font-outfit drop-shadow-md">
-          SAI KUMAR<span className="text-cyan-400"></span>
+        <a href="#" className="flex items-center gap-2 text-2xl font-bold text-white tracking-wider font-outfit drop-shadow-md">
+          SAI KUMAR<span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_#22d3ee]"></span>
         </a>
 
         {/* Desktop Navbar Links */}
