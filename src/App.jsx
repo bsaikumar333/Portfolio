@@ -12,9 +12,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <LeadershipAndExtracurriculars />
       <SkillCloud />
       <ExperienceAndProjects />
+      <LeadershipAndExtracurriculars />
       <Contact />
     </main>
   );
