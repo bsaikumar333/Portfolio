@@ -6,7 +6,7 @@ const navItems = [
   { name: 'Home', href: '/#' },
   { name: 'About', href: '/#about' },
   { name: 'Skills', href: '/#skills' },
-  { name: 'Experience', href: '/#experience' },
+  { name: 'Projects', href: '/#experience' },
   { name: 'Leadership', href: '/#leadership' },
   { name: 'Contact', href: '/#contact' }
 ];
@@ -27,7 +27,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#030014]/80 backdrop-blur-lg shadow-xl border-b border-white/5 py-4' : 'bg-transparent py-8'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#030014]/80 backdrop-blur-lg shadow-xl py-4' : 'bg-transparent py-8'
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 flex items-center justify-between">

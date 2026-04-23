@@ -64,7 +64,7 @@ export default function Contact() {
     <section className="bg-[#030014] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="contact">
       {/* Background elements */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[400px] bg-fuchsia-600/10 blur-[120px] rounded-full pointer-events-none" />
-      
+
       {/* Ambient 3D Shape */}
       <div className="absolute top-[20%] right-[10%] opacity-30 pointer-events-none hidden md:block z-0 perspective-1000">
         <Cube3D />
@@ -88,23 +88,23 @@ export default function Contact() {
         </motion.div>
 
         <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
-          <ContactIcon 
-            icon={Linkedin} 
-            href="https://www.linkedin.com/in/bayineni-sai-kumar" 
+          <ContactIcon
+            icon={Linkedin}
+            href="https://www.linkedin.com/in/bayineni-sai-kumar"
             label="LinkedIn"
-            delay={0.1} 
+            delay={0.1}
           />
-          <ContactIcon 
-            icon={Github} 
-            href="https://github.com/bsaikumar333" 
+          <ContactIcon
+            icon={Github}
+            href="https://github.com/bsaikumar333"
             label="GitHub"
-            delay={0.2} 
+            delay={0.2}
           />
-          <ContactIcon 
-            icon={Mail} 
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=saikumarbayineni333@gmail.com" 
+          <ContactIcon
+            icon={Mail}
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=saikumarbayineni333@gmail.com"
             label="Gmail"
-            delay={0.3} 
+            delay={0.3}
           />
         </div>
 
