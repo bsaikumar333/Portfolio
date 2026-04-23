@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
-import { Cube3D } from './Ambient3D';
+import { Cube3D, Rings3D, Sphere3D } from './Ambient3D';
 
 const Github = (props) => (
   <svg
@@ -62,6 +62,13 @@ const ContactIcon = ({ icon: Icon, href, label, delay }) => (
 export default function Contact() {
   return (
     <section className="bg-[#030014] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="contact">
+      {/* Ambient 3D Shapes */}
+      <div className="absolute top-[10%] left-[5%] opacity-20 pointer-events-none hidden md:block z-0 perspective-1000">
+        <Rings3D className="scale-150 rotate-12" />
+      </div>
+      <div className="absolute bottom-[5%] right-[2%] opacity-15 pointer-events-none hidden md:block z-0 perspective-1000">
+        <Sphere3D className="scale-125" />
+      </div>
       {/* Background elements */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[400px] bg-fuchsia-600/10 blur-[120px] rounded-full pointer-events-none" />
 

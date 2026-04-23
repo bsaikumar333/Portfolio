@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
+import { Torus3D } from './Ambient3D';
 import { Rings3D } from './Ambient3D';
 
 export default function About() {
   return (
     <section className="bg-[#030014] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="about">
+      {/* Ambient 3D Shapes */}
+      <div className="absolute bottom-[10%] right-[2%] opacity-20 pointer-events-none hidden md:block z-0 perspective-1000">
+        <Torus3D className="scale-125" />
+      </div>
       {/* Ambient 3D Shape */}
       <div className="absolute top-1/4 left-[-2%] opacity-30 pointer-events-none hidden md:block z-0 perspective-1000">
         <Rings3D />

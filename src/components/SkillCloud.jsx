@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Code2, Database, LayoutTemplate, Server, Palette, FileCode, Terminal } from 'lucide-react';
-import { Diamond3D } from './Ambient3D';
+import { Diamond3D, FloatingParticles3D, Torus3D } from './Ambient3D';
 
 const skillCategories = [
   {
@@ -40,9 +40,15 @@ const itemVariants = {
 export default function SkillCloud() {
   return (
     <section className="bg-[#030014] text-white py-24 relative overflow-hidden" id="skills">
-      {/* Ambient 3D Shape */}
+      {/* Ambient 3D Shapes */}
       <div className="absolute top-[15%] right-[5%] opacity-30 pointer-events-none hidden md:block z-0 perspective-1000">
         <Diamond3D />
+      </div>
+      <div className="absolute top-[5%] left-[5%] opacity-40 pointer-events-none z-0">
+        <FloatingParticles3D />
+      </div>
+      <div className="absolute bottom-[-10%] right-[-5%] opacity-20 pointer-events-none hidden lg:block z-0 perspective-1000">
+        <Torus3D className="scale-150 rotate-45" />
       </div>
       <div className="max-w-6xl mx-auto z-10 relative px-6 sm:px-12 lg:px-24">
         

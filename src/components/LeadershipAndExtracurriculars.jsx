@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Plane, Palette } from 'lucide-react';
 import { useRef } from 'react';
-import { Rings3D } from './Ambient3D';
+import { Rings3D, Tetrahedron3D } from './Ambient3D';
 
 const TiltCard = ({ title, club, role, icon: Icon, delay }) => {
   const ref = useRef(null);
@@ -86,6 +86,13 @@ const TiltCard = ({ title, club, role, icon: Icon, delay }) => {
 export default function LeadershipAndExtracurriculars() {
   return (
     <section className="bg-[#030014] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="leadership">
+      {/* Ambient 3D Shapes */}
+      <div className="absolute top-[15%] right-[5%] opacity-20 pointer-events-none hidden md:block z-0 perspective-1000">
+        <Tetrahedron3D className="scale-150" />
+      </div>
+      <div className="absolute bottom-[15%] left-[5%] opacity-20 pointer-events-none hidden md:block z-0 perspective-1000">
+        <Tetrahedron3D className="scale-125 rotate-45" />
+      </div>
       {/* Ambient 3D Shape */}
       <div className="absolute top-1/2 left-[5%] -translate-y-1/2 opacity-30 pointer-events-none hidden lg:block z-0 perspective-1000">
         <Rings3D className="border-fuchsia-500/20" />
