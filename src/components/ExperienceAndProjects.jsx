@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { Award, ShieldCheck, Cpu, Wifi, Plane } from 'lucide-react';
+import { Award, ShieldCheck, Cpu, Wifi, Plane, Sparkles, Bot } from 'lucide-react';
 import { Sphere3D } from './Ambient3D';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ title, highlight, description, icon: Icon, delay }) => (
   <motion.div
@@ -8,8 +9,9 @@ const ProjectCard = ({ title, highlight, description, icon: Icon, delay }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.6, delay }}
-    className="glass-card rounded-2xl p-6 group glass-hover"
+    className="glass-card rounded-2xl p-6 group glass-hover relative overflow-hidden"
   >
+    <div className="absolute -right-10 -top-10 w-32 h-32 bg-fuchsia-500/5 rounded-full blur-3xl group-hover:bg-fuchsia-500/10 transition-all duration-500" />
     <div className="flex items-start gap-4">
       <div className="p-3 rounded-xl bg-fuchsia-500/10 text-fuchsia-400 group-hover:bg-fuchsia-500/20 group-hover:scale-110 transition-all duration-300">
         <Icon className="w-6 h-6" />
@@ -88,6 +90,40 @@ export default function ExperienceAndProjects() {
               icon={ShieldCheck}
               delay={0.2}
             />
+
+            {/* LLM Projects Section */}
+            <Link to="/llm-projects" className="block">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="glass-card rounded-2xl p-6 group hover:border-fuchsia-500/50 transition-all duration-500 bg-gradient-to-br from-fuchsia-500/5 to-transparent relative overflow-hidden"
+              >
+                <div className="absolute -right-8 -top-8 w-24 h-24 bg-fuchsia-500/10 rounded-full blur-2xl group-hover:bg-fuchsia-500/20 transition-all duration-500" />
+                <div className="flex items-start gap-4 relative z-10">
+                  <div className="p-3 rounded-xl bg-fuchsia-500/20 text-fuchsia-400 group-hover:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(217,70,239,0.2)]">
+                    <Bot className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-fuchsia-300 transition-colors flex items-center gap-2">
+                      LLM Projects
+                      <Sparkles className="w-4 h-4 text-orange-400" />
+                    </h3>
+                    <span className="inline-block px-2 py-1 bg-fuchsia-500/20 border border-fuchsia-500/20 text-fuchsia-200 text-xs font-medium rounded-md mb-3">
+                      New Dashboard
+                    </span>
+                    <p className="text-gray-400 text-sm leading-relaxed mt-1">
+                      Explore my work with Large Language Models, Generative AI, and Autonomous Agents.
+                    </p>
+                    <div className="mt-4 flex items-center gap-2 text-fuchsia-400 text-sm font-semibold group-hover:gap-3 transition-all">
+                      Open Dashboard
+                      <span>→</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
           </div>
 
           {/* Workshops Column */}

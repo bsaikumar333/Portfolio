@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { NavHashLink as Link } from 'react-router-hash-link';
 
 const navItems = [
-  { name: 'Home', href: '#' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Leadership', href: '#leadership' },
-  { name: 'Contact', href: '#contact' }
+  { name: 'Home', href: '/#' },
+  { name: 'About', href: '/#about' },
+  { name: 'Skills', href: '/#skills' },
+  { name: 'Experience', href: '/#experience' },
+  { name: 'Leadership', href: '/#leadership' },
+  { name: 'Contact', href: '/#contact' }
 ];
 
 export default function Navbar() {
@@ -31,28 +32,29 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 flex items-center justify-between">
         {/* LOGO */}
-        <a href="#" className="flex items-center gap-2 text-2xl font-bold text-white tracking-wider font-outfit drop-shadow-md">
+        <Link smooth to="/#" className="flex items-center gap-2 text-2xl font-bold text-white tracking-wider font-outfit drop-shadow-md">
           SAI KUMAR<span className="h-2 w-2 rounded-full bg-fuchsia-400 animate-pulse shadow-[0_0_10px_#d946ef]"></span>
-        </a>
+        </Link>
 
         {/* Desktop Navbar Links */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
+            <Link
+              smooth
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="text-sm font-medium text-gray-300 hover:text-fuchsia-400 transition-colors uppercase tracking-wide"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* Mobile menu could be toggled here - default a simplified version */}
         <nav className="flex md:hidden items-center gap-4">
           {/* Showing just a few core links for mobile to prevent overflow, or could use a button */}
-          <a href="#about" className="text-sm font-medium text-gray-300">About</a>
-          <a href="#contact" className="text-sm font-medium text-fuchsia-400">Contact</a>
+          <Link smooth to="/#about" className="text-sm font-medium text-gray-300">About</Link>
+          <Link smooth to="/#contact" className="text-sm font-medium text-fuchsia-400">Contact</Link>
         </nav>
 
       </div>
