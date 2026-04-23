@@ -4,10 +4,11 @@
   --font-inter: 'Inter', sans-serif;
   --font-outfit: 'Outfit', sans-serif;
   
-  --color-background: #f8fafc;
-  --color-secondary: #ffffff;
-  --color-glow: #0ea5e9;
-  --color-text: #0f172a;
+  --color-background: #030014;
+  --color-secondary: #0f172a;
+  --color-glow: #d946ef;
+  --color-text: #ffffff;
+  --color-accent: #fb923c;
 }
 
 @layer base {
@@ -21,18 +22,18 @@
 
 @layer utilities {
   .glass-card-light {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   }
   .glass-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.3);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   }
 
   .glass-hover {
@@ -40,12 +41,12 @@
   }
   
   .glass-hover:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 10px 40px rgba(14, 165, 233, 0.2);
+    background: rgba(217, 70, 239, 0.05);
+    border-color: rgba(217, 70, 239, 0.3);
+    box-shadow: 0 10px 40px rgba(217, 70, 239, 0.15);
   }
 
   .glow-text {
-    text-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+    text-shadow: 0 0 15px rgba(217, 70, 239, 0.4);
   }
 }

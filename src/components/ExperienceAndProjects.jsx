@@ -11,15 +11,15 @@ const ProjectCard = ({ title, highlight, description, icon: Icon, delay }) => (
     className="glass-card rounded-2xl p-6 group glass-hover"
   >
     <div className="flex items-start gap-4">
-      <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20 group-hover:scale-110 transition-all duration-300">
+      <div className="p-3 rounded-xl bg-fuchsia-500/10 text-fuchsia-400 group-hover:bg-fuchsia-500/20 group-hover:scale-110 transition-all duration-300">
         <Icon className="w-6 h-6" />
       </div>
       <div>
-        <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-300 transition-colors">
+        <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-fuchsia-300 transition-colors">
           {title}
         </h3>
         {highlight && (
-          <span className="inline-block px-2 py-1 bg-blue-500/20 border border-blue-500/20 text-blue-200 text-xs font-medium rounded-md mb-3">
+          <span className="inline-block px-2 py-1 bg-orange-500/20 border border-orange-500/20 text-orange-200 text-xs font-medium rounded-md mb-3">
             {highlight}
           </span>
         )}
@@ -37,7 +37,7 @@ const WorkshopItem = ({ title, icon: Icon, delay }) => (
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}
-    className="flex items-center gap-4 p-4 rounded-xl glass-card border border-white/5 hover:border-cyan-400/30 transition-all cursor-default"
+    className="flex items-center gap-4 p-4 rounded-xl glass-card border border-white/5 hover:border-fuchsia-400/30 transition-all cursor-default"
   >
     <div className="p-2 rounded-lg bg-white/5 text-gray-300">
       <Icon className="w-5 h-5" />
@@ -48,7 +48,7 @@ const WorkshopItem = ({ title, icon: Icon, delay }) => (
 
 export default function ExperienceAndProjects() {
   return (
-    <section className="bg-[#0f172a] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="experience">
+    <section className="bg-[#030014] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="experience">
       {/* Ambient 3D Shape */}
       <div className="absolute bottom-[10%] left-[5%] opacity-30 pointer-events-none hidden md:block z-0 perspective-1000">
         <Sphere3D />
@@ -62,16 +62,16 @@ export default function ExperienceAndProjects() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-outfit">
-            Projects & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Experience</span>
+            Projects & <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-orange-400">Experience</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-fuchsia-500 to-orange-400 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 w-full">
           {/* Projects Column */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <span className="w-2 h-8 rounded-full bg-cyan-500 block"></span>
+              <span className="w-2 h-8 rounded-full bg-fuchsia-500 block"></span>
               Featured Work
             </h3>
             <ProjectCard 
@@ -93,7 +93,7 @@ export default function ExperienceAndProjects() {
           {/* Workshops Column */}
           <div>
             <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <span className="w-2 h-8 rounded-full bg-blue-500 block"></span>
+              <span className="w-2 h-8 rounded-full bg-orange-500 block"></span>
               Technical Workshops
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">

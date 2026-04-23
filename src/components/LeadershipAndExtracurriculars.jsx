@@ -53,13 +53,13 @@ const TiltCard = ({ title, club, role, icon: Icon, delay }) => {
     >
       <div
         style={{ transform: "translateZ(50px)" }}
-        className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-orange-400/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
       />
       <motion.div
         style={{ transform: "translateZ(75px)" }}
-        className="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 shadow-2xl glass-card group-hover:border-cyan-400/50 transition-colors"
+        className="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 shadow-2xl glass-card group-hover:border-fuchsia-400/50 transition-colors"
       >
-        <Icon className="w-10 h-10 text-cyan-400 group-hover:text-cyan-300 transition-colors drop-shadow-lg" />
+        <Icon className="w-10 h-10 text-fuchsia-400 group-hover:text-fuchsia-300 transition-colors drop-shadow-lg" />
       </motion.div>
       <motion.h3
         style={{ transform: "translateZ(60px)" }}
@@ -69,7 +69,7 @@ const TiltCard = ({ title, club, role, icon: Icon, delay }) => {
       </motion.h3>
       <motion.p
         style={{ transform: "translateZ(40px)" }}
-        className="text-cyan-300/80 font-medium tracking-wide"
+        className="text-fuchsia-300/80 font-medium tracking-wide"
       >
         {club}
       </motion.p>
@@ -85,10 +85,10 @@ const TiltCard = ({ title, club, role, icon: Icon, delay }) => {
 
 export default function LeadershipAndExtracurriculars() {
   return (
-    <section className="bg-[#0f172a] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="leadership">
+    <section className="bg-[#030014] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="leadership">
       {/* Ambient 3D Shape */}
       <div className="absolute top-1/2 left-[5%] -translate-y-1/2 opacity-30 pointer-events-none hidden lg:block z-0 perspective-1000">
-        <Rings3D className="border-cyan-500/20" />
+        <Rings3D className="border-fuchsia-500/20" />
       </div>
       <div className="max-w-6xl mx-auto z-10 relative">
         <motion.div
@@ -99,9 +99,9 @@ export default function LeadershipAndExtracurriculars() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-outfit">
-            Leadership & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Extracurriculars</span>
+            Leadership & <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-orange-400">Extracurriculars</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-fuchsia-500 to-orange-400 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 justify-center mt-12 perspective-1000">

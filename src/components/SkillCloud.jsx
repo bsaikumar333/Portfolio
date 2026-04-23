@@ -39,7 +39,7 @@ const itemVariants = {
 
 export default function SkillCloud() {
   return (
-    <section className="bg-slate-50 text-slate-900 py-24 relative overflow-hidden" id="skills">
+    <section className="bg-[#030014] text-white py-24 relative overflow-hidden" id="skills">
       {/* Ambient 3D Shape */}
       <div className="absolute top-[15%] right-[5%] opacity-30 pointer-events-none hidden md:block z-0 perspective-1000">
         <Diamond3D />
@@ -54,10 +54,10 @@ export default function SkillCloud() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-outfit">
-            Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Stack</span>
+            Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-orange-400">Stack</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full mt-2" />
-          <p className="text-center text-slate-500 font-light text-lg mt-6 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-fuchsia-500 to-orange-400 mx-auto rounded-full mt-2" />
+          <p className="text-center text-gray-400 font-light text-lg mt-6 max-w-2xl mx-auto">
             A clean, carefully curated set of technologies I use to build scalable and high-performance applications.
           </p>
         </motion.div>
@@ -67,7 +67,7 @@ export default function SkillCloud() {
             <div key={idx} className="flex flex-col">
               
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-3">
-                <span className="w-2 h-6 rounded-full bg-gradient-to-b from-cyan-400 to-blue-500 shadow-sm"></span>
+                <span className="w-2 h-6 rounded-full bg-gradient-to-b from-fuchsia-500 to-orange-400 shadow-sm"></span>
                 {category.title}
               </h3>
               
@@ -82,12 +82,12 @@ export default function SkillCloud() {
                   <motion.div
                     key={skill.name}
                     variants={itemVariants}
-                    className={`flex items-center gap-4 p-4 rounded-2xl border ${skill.border} bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default group`}
+                    className={`flex items-center gap-4 p-4 rounded-2xl border ${skill.border} glass-card hover:shadow-lg hover:shadow-fuchsia-500/10 hover:-translate-y-1 transition-all duration-300 cursor-default group`}
                   >
                     <div className={`p-3 rounded-xl ${skill.bg} ${skill.color} group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
                       <skill.icon className="w-6 h-6" />
                     </div>
-                    <span className="font-semibold text-slate-800 tracking-wide">{skill.name}</span>
+                    <span className="font-semibold text-white tracking-wide">{skill.name}</span>
                   </motion.div>
                 ))}
               </motion.div>

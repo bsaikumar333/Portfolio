@@ -50,10 +50,10 @@ const ContactIcon = ({ icon: Icon, href, label, delay }) => (
     whileHover={{ y: -5, scale: 1.05 }}
     className="group relative flex flex-col items-center gap-3"
   >
-    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl glass-card-light flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 shadow-lg group-hover:shadow-[0_0_30px_rgba(56,189,248,0.3)] transition-all duration-300">
-      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-slate-600 group-hover:text-cyan-400 transition-colors" />
+    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl glass-card flex items-center justify-center border border-white/10 group-hover:border-fuchsia-400/50 shadow-lg group-hover:shadow-[0_0_30px_rgba(217,70,239,0.3)] transition-all duration-300">
+      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-gray-400 group-hover:text-fuchsia-400 transition-colors" />
     </div>
-    <span className="text-sm font-medium text-slate-600 group-hover:text-cyan-300 transition-colors">
+    <span className="text-sm font-medium text-gray-400 group-hover:text-fuchsia-300 transition-colors">
       {label}
     </span>
   </motion.a>
@@ -61,9 +61,9 @@ const ContactIcon = ({ icon: Icon, href, label, delay }) => (
 
 export default function Contact() {
   return (
-    <section className="bg-slate-50 text-slate-900 py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="contact">
+    <section className="bg-[#030014] text-white py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="contact">
       {/* Background elements */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[400px] bg-fuchsia-600/10 blur-[120px] rounded-full pointer-events-none" />
       
       {/* Ambient 3D Shape */}
       <div className="absolute top-[20%] right-[10%] opacity-30 pointer-events-none hidden md:block z-0 perspective-1000">
@@ -79,10 +79,10 @@ export default function Contact() {
           className="mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-outfit">
-            Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Connect</span>
+            Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-orange-400">Connect</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full mb-8" />
-          <p className="text-slate-600 max-w-xl mx-auto text-lg font-light">
+          <div className="w-24 h-1 bg-gradient-to-r from-fuchsia-500 to-orange-400 mx-auto rounded-full mb-8" />
+          <p className="text-gray-300 max-w-xl mx-auto text-lg font-light">
             Whether you have a question, a project in mind, or just want to say hi, I'll try my best to get back to you!
           </p>
         </motion.div>
@@ -113,7 +113,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-24 pt-8 border-t border-white/10 text-slate-500 text-sm flex flex-col sm:flex-row justify-between items-center gap-4"
+          className="mt-24 pt-8 border-t border-white/10 text-gray-500 text-sm flex flex-col sm:flex-row justify-between items-center gap-4"
         >
           <p>© {new Date().getFullYear()} Bayineni Sai Kumar. All rights reserved.</p>
           <p>Built with React & Tailwind</p>
